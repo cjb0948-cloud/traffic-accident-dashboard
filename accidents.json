@@ -1,0 +1,1795 @@
+{
+ "meta": {
+  "source": "한국도로교통공단 사망교통사고정보 (공공데이터포털)",
+  "scope": "집계 기준: 사망자가 발생한 교통사고(한국도로교통공단)",
+  "updated": "샘플 데이터",
+  "sample": true
+ },
+ "years": {
+  "2021": {
+   "total": {
+    "accidents": 2600,
+    "deaths": 2704,
+    "injuries": 3510
+   },
+   "region": [
+    {
+     "name": "서울",
+     "accidents": 253,
+     "deaths": 276,
+     "injuries": 319
+    },
+    {
+     "name": "부산",
+     "accidents": 137,
+     "deaths": 147,
+     "injuries": 180
+    },
+    {
+     "name": "대구",
+     "accidents": 102,
+     "deaths": 101,
+     "injuries": 134
+    },
+    {
+     "name": "인천",
+     "accidents": 109,
+     "deaths": 123,
+     "injuries": 148
+    },
+    {
+     "name": "광주",
+     "accidents": 58,
+     "deaths": 55,
+     "injuries": 73
+    },
+    {
+     "name": "대전",
+     "accidents": 56,
+     "deaths": 61,
+     "injuries": 76
+    },
+    {
+     "name": "울산",
+     "accidents": 54,
+     "deaths": 57,
+     "injuries": 74
+    },
+    {
+     "name": "세종",
+     "accidents": 23,
+     "deaths": 22,
+     "injuries": 29
+    },
+    {
+     "name": "경기",
+     "accidents": 517,
+     "deaths": 529,
+     "injuries": 737
+    },
+    {
+     "name": "강원",
+     "accidents": 128,
+     "deaths": 128,
+     "injuries": 172
+    },
+    {
+     "name": "충북",
+     "accidents": 122,
+     "deaths": 136,
+     "injuries": 163
+    },
+    {
+     "name": "충남",
+     "accidents": 177,
+     "deaths": 182,
+     "injuries": 245
+    },
+    {
+     "name": "전북",
+     "accidents": 142,
+     "deaths": 147,
+     "injuries": 188
+    },
+    {
+     "name": "전남",
+     "accidents": 209,
+     "deaths": 207,
+     "injuries": 274
+    },
+    {
+     "name": "경북",
+     "accidents": 233,
+     "deaths": 244,
+     "injuries": 327
+    },
+    {
+     "name": "경남",
+     "accidents": 222,
+     "deaths": 234,
+     "injuries": 292
+    },
+    {
+     "name": "제주",
+     "accidents": 58,
+     "deaths": 55,
+     "injuries": 79
+    }
+   ],
+   "month": [
+    {
+     "label": "1월",
+     "accidents": 186,
+     "deaths": 201,
+     "injuries": 263
+    },
+    {
+     "label": "2월",
+     "accidents": 182,
+     "deaths": 190,
+     "injuries": 251
+    },
+    {
+     "label": "3월",
+     "accidents": 201,
+     "deaths": 198,
+     "injuries": 275
+    },
+    {
+     "label": "4월",
+     "accidents": 197,
+     "deaths": 219,
+     "injuries": 268
+    },
+    {
+     "label": "5월",
+     "accidents": 227,
+     "deaths": 245,
+     "injuries": 313
+    },
+    {
+     "label": "6월",
+     "accidents": 205,
+     "deaths": 221,
+     "injuries": 288
+    },
+    {
+     "label": "7월",
+     "accidents": 221,
+     "deaths": 226,
+     "injuries": 286
+    },
+    {
+     "label": "8월",
+     "accidents": 235,
+     "deaths": 220,
+     "injuries": 298
+    },
+    {
+     "label": "9월",
+     "accidents": 230,
+     "deaths": 238,
+     "injuries": 325
+    },
+    {
+     "label": "10월",
+     "accidents": 261,
+     "deaths": 258,
+     "injuries": 328
+    },
+    {
+     "label": "11월",
+     "accidents": 233,
+     "deaths": 258,
+     "injuries": 319
+    },
+    {
+     "label": "12월",
+     "accidents": 222,
+     "deaths": 230,
+     "injuries": 296
+    }
+   ],
+   "hour": [
+    {
+     "label": "0시",
+     "accidents": 96,
+     "deaths": 99,
+     "injuries": 131
+    },
+    {
+     "label": "1시",
+     "accidents": 75,
+     "deaths": 84,
+     "injuries": 109
+    },
+    {
+     "label": "2시",
+     "accidents": 73,
+     "deaths": 79,
+     "injuries": 96
+    },
+    {
+     "label": "3시",
+     "accidents": 79,
+     "deaths": 85,
+     "injuries": 104
+    },
+    {
+     "label": "4시",
+     "accidents": 93,
+     "deaths": 89,
+     "injuries": 119
+    },
+    {
+     "label": "5시",
+     "accidents": 98,
+     "deaths": 105,
+     "injuries": 126
+    },
+    {
+     "label": "6시",
+     "accidents": 88,
+     "deaths": 92,
+     "injuries": 109
+    },
+    {
+     "label": "7시",
+     "accidents": 92,
+     "deaths": 105,
+     "injuries": 134
+    },
+    {
+     "label": "8시",
+     "accidents": 91,
+     "deaths": 101,
+     "injuries": 132
+    },
+    {
+     "label": "9시",
+     "accidents": 83,
+     "deaths": 88,
+     "injuries": 114
+    },
+    {
+     "label": "10시",
+     "accidents": 93,
+     "deaths": 93,
+     "injuries": 121
+    },
+    {
+     "label": "11시",
+     "accidents": 105,
+     "deaths": 101,
+     "injuries": 129
+    },
+    {
+     "label": "12시",
+     "accidents": 108,
+     "deaths": 121,
+     "injuries": 146
+    },
+    {
+     "label": "13시",
+     "accidents": 111,
+     "deaths": 116,
+     "injuries": 154
+    },
+    {
+     "label": "14시",
+     "accidents": 117,
+     "deaths": 121,
+     "injuries": 160
+    },
+    {
+     "label": "15시",
+     "accidents": 117,
+     "deaths": 123,
+     "injuries": 171
+    },
+    {
+     "label": "16시",
+     "accidents": 136,
+     "deaths": 139,
+     "injuries": 178
+    },
+    {
+     "label": "17시",
+     "accidents": 162,
+     "deaths": 164,
+     "injuries": 202
+    },
+    {
+     "label": "18시",
+     "accidents": 158,
+     "deaths": 163,
+     "injuries": 233
+    },
+    {
+     "label": "19시",
+     "accidents": 138,
+     "deaths": 146,
+     "injuries": 201
+    },
+    {
+     "label": "20시",
+     "accidents": 135,
+     "deaths": 138,
+     "injuries": 178
+    },
+    {
+     "label": "21시",
+     "accidents": 124,
+     "deaths": 127,
+     "injuries": 172
+    },
+    {
+     "label": "22시",
+     "accidents": 117,
+     "deaths": 120,
+     "injuries": 148
+    },
+    {
+     "label": "23시",
+     "accidents": 111,
+     "deaths": 105,
+     "injuries": 143
+    }
+   ],
+   "type": [
+    {
+     "name": "차대사람",
+     "accidents": 1004,
+     "deaths": 1021,
+     "injuries": 1382
+    },
+    {
+     "name": "차대차",
+     "accidents": 833,
+     "deaths": 839,
+     "injuries": 1103
+    },
+    {
+     "name": "차량단독",
+     "accidents": 715,
+     "deaths": 789,
+     "injuries": 952
+    },
+    {
+     "name": "철길건널목",
+     "accidents": 48,
+     "deaths": 55,
+     "injuries": 73
+    }
+   ]
+  },
+  "2022": {
+   "total": {
+    "accidents": 2550,
+    "deaths": 2652,
+    "injuries": 3442
+   },
+   "region": [
+    {
+     "name": "서울",
+     "accidents": 259,
+     "deaths": 265,
+     "injuries": 328
+    },
+    {
+     "name": "부산",
+     "accidents": 142,
+     "deaths": 137,
+     "injuries": 176
+    },
+    {
+     "name": "대구",
+     "accidents": 99,
+     "deaths": 94,
+     "injuries": 132
+    },
+    {
+     "name": "인천",
+     "accidents": 113,
+     "deaths": 108,
+     "injuries": 143
+    },
+    {
+     "name": "광주",
+     "accidents": 56,
+     "deaths": 54,
+     "injuries": 76
+    },
+    {
+     "name": "대전",
+     "accidents": 53,
+     "deaths": 54,
+     "injuries": 77
+    },
+    {
+     "name": "울산",
+     "accidents": 55,
+     "deaths": 57,
+     "injuries": 72
+    },
+    {
+     "name": "세종",
+     "accidents": 21,
+     "deaths": 23,
+     "injuries": 29
+    },
+    {
+     "name": "경기",
+     "accidents": 488,
+     "deaths": 551,
+     "injuries": 734
+    },
+    {
+     "name": "강원",
+     "accidents": 116,
+     "deaths": 125,
+     "injuries": 169
+    },
+    {
+     "name": "충북",
+     "accidents": 119,
+     "deaths": 128,
+     "injuries": 158
+    },
+    {
+     "name": "충남",
+     "accidents": 172,
+     "deaths": 188,
+     "injuries": 227
+    },
+    {
+     "name": "전북",
+     "accidents": 139,
+     "deaths": 132,
+     "injuries": 175
+    },
+    {
+     "name": "전남",
+     "accidents": 201,
+     "deaths": 199,
+     "injuries": 268
+    },
+    {
+     "name": "경북",
+     "accidents": 230,
+     "deaths": 249,
+     "injuries": 322
+    },
+    {
+     "name": "경남",
+     "accidents": 229,
+     "deaths": 231,
+     "injuries": 280
+    },
+    {
+     "name": "제주",
+     "accidents": 58,
+     "deaths": 57,
+     "injuries": 76
+    }
+   ],
+   "month": [
+    {
+     "label": "1월",
+     "accidents": 200,
+     "deaths": 209,
+     "injuries": 262
+    },
+    {
+     "label": "2월",
+     "accidents": 182,
+     "deaths": 183,
+     "injuries": 257
+    },
+    {
+     "label": "3월",
+     "accidents": 186,
+     "deaths": 195,
+     "injuries": 257
+    },
+    {
+     "label": "4월",
+     "accidents": 201,
+     "deaths": 207,
+     "injuries": 287
+    },
+    {
+     "label": "5월",
+     "accidents": 211,
+     "deaths": 227,
+     "injuries": 302
+    },
+    {
+     "label": "6월",
+     "accidents": 198,
+     "deaths": 226,
+     "injuries": 289
+    },
+    {
+     "label": "7월",
+     "accidents": 222,
+     "deaths": 217,
+     "injuries": 289
+    },
+    {
+     "label": "8월",
+     "accidents": 225,
+     "deaths": 232,
+     "injuries": 285
+    },
+    {
+     "label": "9월",
+     "accidents": 221,
+     "deaths": 224,
+     "injuries": 300
+    },
+    {
+     "label": "10월",
+     "accidents": 255,
+     "deaths": 269,
+     "injuries": 318
+    },
+    {
+     "label": "11월",
+     "accidents": 229,
+     "deaths": 241,
+     "injuries": 298
+    },
+    {
+     "label": "12월",
+     "accidents": 220,
+     "deaths": 222,
+     "injuries": 298
+    }
+   ],
+   "hour": [
+    {
+     "label": "0시",
+     "accidents": 86,
+     "deaths": 93,
+     "injuries": 117
+    },
+    {
+     "label": "1시",
+     "accidents": 76,
+     "deaths": 84,
+     "injuries": 110
+    },
+    {
+     "label": "2시",
+     "accidents": 74,
+     "deaths": 76,
+     "injuries": 96
+    },
+    {
+     "label": "3시",
+     "accidents": 77,
+     "deaths": 83,
+     "injuries": 104
+    },
+    {
+     "label": "4시",
+     "accidents": 85,
+     "deaths": 95,
+     "injuries": 125
+    },
+    {
+     "label": "5시",
+     "accidents": 92,
+     "deaths": 93,
+     "injuries": 130
+    },
+    {
+     "label": "6시",
+     "accidents": 82,
+     "deaths": 86,
+     "injuries": 107
+    },
+    {
+     "label": "7시",
+     "accidents": 95,
+     "deaths": 101,
+     "injuries": 124
+    },
+    {
+     "label": "8시",
+     "accidents": 85,
+     "deaths": 97,
+     "injuries": 122
+    },
+    {
+     "label": "9시",
+     "accidents": 82,
+     "deaths": 81,
+     "injuries": 109
+    },
+    {
+     "label": "10시",
+     "accidents": 84,
+     "deaths": 86,
+     "injuries": 114
+    },
+    {
+     "label": "11시",
+     "accidents": 95,
+     "deaths": 100,
+     "injuries": 129
+    },
+    {
+     "label": "12시",
+     "accidents": 114,
+     "deaths": 108,
+     "injuries": 153
+    },
+    {
+     "label": "13시",
+     "accidents": 113,
+     "deaths": 113,
+     "injuries": 144
+    },
+    {
+     "label": "14시",
+     "accidents": 119,
+     "deaths": 116,
+     "injuries": 161
+    },
+    {
+     "label": "15시",
+     "accidents": 121,
+     "deaths": 125,
+     "injuries": 159
+    },
+    {
+     "label": "16시",
+     "accidents": 140,
+     "deaths": 143,
+     "injuries": 170
+    },
+    {
+     "label": "17시",
+     "accidents": 152,
+     "deaths": 165,
+     "injuries": 204
+    },
+    {
+     "label": "18시",
+     "accidents": 161,
+     "deaths": 158,
+     "injuries": 217
+    },
+    {
+     "label": "19시",
+     "accidents": 143,
+     "deaths": 152,
+     "injuries": 195
+    },
+    {
+     "label": "20시",
+     "accidents": 133,
+     "deaths": 141,
+     "injuries": 171
+    },
+    {
+     "label": "21시",
+     "accidents": 126,
+     "deaths": 122,
+     "injuries": 176
+    },
+    {
+     "label": "22시",
+     "accidents": 112,
+     "deaths": 122,
+     "injuries": 158
+    },
+    {
+     "label": "23시",
+     "accidents": 103,
+     "deaths": 112,
+     "injuries": 147
+    }
+   ],
+   "type": [
+    {
+     "name": "차대사람",
+     "accidents": 963,
+     "deaths": 1006,
+     "injuries": 1366
+    },
+    {
+     "name": "차대차",
+     "accidents": 828,
+     "deaths": 833,
+     "injuries": 1075
+    },
+    {
+     "name": "차량단독",
+     "accidents": 704,
+     "deaths": 756,
+     "injuries": 928
+    },
+    {
+     "name": "철길건널목",
+     "accidents": 55,
+     "deaths": 57,
+     "injuries": 73
+    }
+   ]
+  },
+  "2023": {
+   "total": {
+    "accidents": 2500,
+    "deaths": 2600,
+    "injuries": 3375
+   },
+   "region": [
+    {
+     "name": "서울",
+     "accidents": 243,
+     "deaths": 268,
+     "injuries": 312
+    },
+    {
+     "name": "부산",
+     "accidents": 137,
+     "deaths": 138,
+     "injuries": 168
+    },
+    {
+     "name": "대구",
+     "accidents": 89,
+     "deaths": 95,
+     "injuries": 129
+    },
+    {
+     "name": "인천",
+     "accidents": 101,
+     "deaths": 114,
+     "injuries": 144
+    },
+    {
+     "name": "광주",
+     "accidents": 55,
+     "deaths": 55,
+     "injuries": 69
+    },
+    {
+     "name": "대전",
+     "accidents": 53,
+     "deaths": 54,
+     "injuries": 71
+    },
+    {
+     "name": "울산",
+     "accidents": 51,
+     "deaths": 54,
+     "injuries": 75
+    },
+    {
+     "name": "세종",
+     "accidents": 23,
+     "deaths": 21,
+     "injuries": 27
+    },
+    {
+     "name": "경기",
+     "accidents": 516,
+     "deaths": 520,
+     "injuries": 705
+    },
+    {
+     "name": "강원",
+     "accidents": 125,
+     "deaths": 125,
+     "injuries": 160
+    },
+    {
+     "name": "충북",
+     "accidents": 114,
+     "deaths": 124,
+     "injuries": 161
+    },
+    {
+     "name": "충남",
+     "accidents": 181,
+     "deaths": 190,
+     "injuries": 242
+    },
+    {
+     "name": "전북",
+     "accidents": 127,
+     "deaths": 138,
+     "injuries": 177
+    },
+    {
+     "name": "전남",
+     "accidents": 195,
+     "deaths": 198,
+     "injuries": 251
+    },
+    {
+     "name": "경북",
+     "accidents": 226,
+     "deaths": 231,
+     "injuries": 311
+    },
+    {
+     "name": "경남",
+     "accidents": 210,
+     "deaths": 222,
+     "injuries": 303
+    },
+    {
+     "name": "제주",
+     "accidents": 54,
+     "deaths": 53,
+     "injuries": 70
+    }
+   ],
+   "month": [
+    {
+     "label": "1월",
+     "accidents": 198,
+     "deaths": 202,
+     "injuries": 259
+    },
+    {
+     "label": "2월",
+     "accidents": 185,
+     "deaths": 192,
+     "injuries": 235
+    },
+    {
+     "label": "3월",
+     "accidents": 194,
+     "deaths": 198,
+     "injuries": 272
+    },
+    {
+     "label": "4월",
+     "accidents": 199,
+     "deaths": 200,
+     "injuries": 265
+    },
+    {
+     "label": "5월",
+     "accidents": 219,
+     "deaths": 220,
+     "injuries": 295
+    },
+    {
+     "label": "6월",
+     "accidents": 201,
+     "deaths": 211,
+     "injuries": 269
+    },
+    {
+     "label": "7월",
+     "accidents": 203,
+     "deaths": 215,
+     "injuries": 282
+    },
+    {
+     "label": "8월",
+     "accidents": 211,
+     "deaths": 217,
+     "injuries": 299
+    },
+    {
+     "label": "9월",
+     "accidents": 229,
+     "deaths": 225,
+     "injuries": 300
+    },
+    {
+     "label": "10월",
+     "accidents": 236,
+     "deaths": 241,
+     "injuries": 316
+    },
+    {
+     "label": "11월",
+     "accidents": 224,
+     "deaths": 251,
+     "injuries": 314
+    },
+    {
+     "label": "12월",
+     "accidents": 201,
+     "deaths": 228,
+     "injuries": 269
+    }
+   ],
+   "hour": [
+    {
+     "label": "0시",
+     "accidents": 85,
+     "deaths": 95,
+     "injuries": 123
+    },
+    {
+     "label": "1시",
+     "accidents": 72,
+     "deaths": 75,
+     "injuries": 102
+    },
+    {
+     "label": "2시",
+     "accidents": 70,
+     "deaths": 73,
+     "injuries": 96
+    },
+    {
+     "label": "3시",
+     "accidents": 71,
+     "deaths": 78,
+     "injuries": 104
+    },
+    {
+     "label": "4시",
+     "accidents": 81,
+     "deaths": 92,
+     "injuries": 110
+    },
+    {
+     "label": "5시",
+     "accidents": 88,
+     "deaths": 97,
+     "injuries": 126
+    },
+    {
+     "label": "6시",
+     "accidents": 78,
+     "deaths": 87,
+     "injuries": 106
+    },
+    {
+     "label": "7시",
+     "accidents": 91,
+     "deaths": 95,
+     "injuries": 116
+    },
+    {
+     "label": "8시",
+     "accidents": 88,
+     "deaths": 96,
+     "injuries": 116
+    },
+    {
+     "label": "9시",
+     "accidents": 83,
+     "deaths": 85,
+     "injuries": 112
+    },
+    {
+     "label": "10시",
+     "accidents": 87,
+     "deaths": 91,
+     "injuries": 111
+    },
+    {
+     "label": "11시",
+     "accidents": 98,
+     "deaths": 96,
+     "injuries": 133
+    },
+    {
+     "label": "12시",
+     "accidents": 113,
+     "deaths": 106,
+     "injuries": 155
+    },
+    {
+     "label": "13시",
+     "accidents": 109,
+     "deaths": 110,
+     "injuries": 149
+    },
+    {
+     "label": "14시",
+     "accidents": 113,
+     "deaths": 118,
+     "injuries": 154
+    },
+    {
+     "label": "15시",
+     "accidents": 122,
+     "deaths": 114,
+     "injuries": 156
+    },
+    {
+     "label": "16시",
+     "accidents": 125,
+     "deaths": 141,
+     "injuries": 181
+    },
+    {
+     "label": "17시",
+     "accidents": 155,
+     "deaths": 158,
+     "injuries": 211
+    },
+    {
+     "label": "18시",
+     "accidents": 161,
+     "deaths": 165,
+     "injuries": 211
+    },
+    {
+     "label": "19시",
+     "accidents": 133,
+     "deaths": 148,
+     "injuries": 194
+    },
+    {
+     "label": "20시",
+     "accidents": 136,
+     "deaths": 139,
+     "injuries": 168
+    },
+    {
+     "label": "21시",
+     "accidents": 126,
+     "deaths": 125,
+     "injuries": 156
+    },
+    {
+     "label": "22시",
+     "accidents": 112,
+     "deaths": 108,
+     "injuries": 145
+    },
+    {
+     "label": "23시",
+     "accidents": 103,
+     "deaths": 108,
+     "injuries": 140
+    }
+   ],
+   "type": [
+    {
+     "name": "차대사람",
+     "accidents": 950,
+     "deaths": 957,
+     "injuries": 1263
+    },
+    {
+     "name": "차대차",
+     "accidents": 826,
+     "deaths": 847,
+     "injuries": 1093
+    },
+    {
+     "name": "차량단독",
+     "accidents": 675,
+     "deaths": 743,
+     "injuries": 951
+    },
+    {
+     "name": "철길건널목",
+     "accidents": 49,
+     "deaths": 53,
+     "injuries": 68
+    }
+   ]
+  },
+  "2024": {
+   "total": {
+    "accidents": 2430,
+    "deaths": 2527,
+    "injuries": 3280
+   },
+   "region": [
+    {
+     "name": "서울",
+     "accidents": 223,
+     "deaths": 259,
+     "injuries": 330
+    },
+    {
+     "name": "부산",
+     "accidents": 136,
+     "deaths": 131,
+     "injuries": 166
+    },
+    {
+     "name": "대구",
+     "accidents": 87,
+     "deaths": 99,
+     "injuries": 127
+    },
+    {
+     "name": "인천",
+     "accidents": 110,
+     "deaths": 109,
+     "injuries": 147
+    },
+    {
+     "name": "광주",
+     "accidents": 55,
+     "deaths": 57,
+     "injuries": 67
+    },
+    {
+     "name": "대전",
+     "accidents": 49,
+     "deaths": 56,
+     "injuries": 74
+    },
+    {
+     "name": "울산",
+     "accidents": 52,
+     "deaths": 53,
+     "injuries": 72
+    },
+    {
+     "name": "세종",
+     "accidents": 22,
+     "deaths": 23,
+     "injuries": 30
+    },
+    {
+     "name": "경기",
+     "accidents": 518,
+     "deaths": 519,
+     "injuries": 652
+    },
+    {
+     "name": "강원",
+     "accidents": 116,
+     "deaths": 116,
+     "injuries": 156
+    },
+    {
+     "name": "충북",
+     "accidents": 113,
+     "deaths": 116,
+     "injuries": 157
+    },
+    {
+     "name": "충남",
+     "accidents": 163,
+     "deaths": 177,
+     "injuries": 243
+    },
+    {
+     "name": "전북",
+     "accidents": 137,
+     "deaths": 136,
+     "injuries": 178
+    },
+    {
+     "name": "전남",
+     "accidents": 175,
+     "deaths": 187,
+     "injuries": 243
+    },
+    {
+     "name": "경북",
+     "accidents": 223,
+     "deaths": 222,
+     "injuries": 297
+    },
+    {
+     "name": "경남",
+     "accidents": 199,
+     "deaths": 214,
+     "injuries": 274
+    },
+    {
+     "name": "제주",
+     "accidents": 52,
+     "deaths": 53,
+     "injuries": 67
+    }
+   ],
+   "month": [
+    {
+     "label": "1월",
+     "accidents": 173,
+     "deaths": 191,
+     "injuries": 259
+    },
+    {
+     "label": "2월",
+     "accidents": 178,
+     "deaths": 187,
+     "injuries": 222
+    },
+    {
+     "label": "3월",
+     "accidents": 177,
+     "deaths": 198,
+     "injuries": 245
+    },
+    {
+     "label": "4월",
+     "accidents": 202,
+     "deaths": 200,
+     "injuries": 255
+    },
+    {
+     "label": "5월",
+     "accidents": 205,
+     "deaths": 226,
+     "injuries": 280
+    },
+    {
+     "label": "6월",
+     "accidents": 196,
+     "deaths": 198,
+     "injuries": 281
+    },
+    {
+     "label": "7월",
+     "accidents": 202,
+     "deaths": 215,
+     "injuries": 289
+    },
+    {
+     "label": "8월",
+     "accidents": 204,
+     "deaths": 218,
+     "injuries": 279
+    },
+    {
+     "label": "9월",
+     "accidents": 208,
+     "deaths": 226,
+     "injuries": 292
+    },
+    {
+     "label": "10월",
+     "accidents": 244,
+     "deaths": 246,
+     "injuries": 305
+    },
+    {
+     "label": "11월",
+     "accidents": 232,
+     "deaths": 224,
+     "injuries": 303
+    },
+    {
+     "label": "12월",
+     "accidents": 209,
+     "deaths": 198,
+     "injuries": 270
+    }
+   ],
+   "hour": [
+    {
+     "label": "0시",
+     "accidents": 83,
+     "deaths": 84,
+     "injuries": 120
+    },
+    {
+     "label": "1시",
+     "accidents": 71,
+     "deaths": 74,
+     "injuries": 103
+    },
+    {
+     "label": "2시",
+     "accidents": 67,
+     "deaths": 75,
+     "injuries": 97
+    },
+    {
+     "label": "3시",
+     "accidents": 78,
+     "deaths": 73,
+     "injuries": 96
+    },
+    {
+     "label": "4시",
+     "accidents": 84,
+     "deaths": 87,
+     "injuries": 107
+    },
+    {
+     "label": "5시",
+     "accidents": 86,
+     "deaths": 93,
+     "injuries": 114
+    },
+    {
+     "label": "6시",
+     "accidents": 83,
+     "deaths": 85,
+     "injuries": 106
+    },
+    {
+     "label": "7시",
+     "accidents": 94,
+     "deaths": 89,
+     "injuries": 121
+    },
+    {
+     "label": "8시",
+     "accidents": 86,
+     "deaths": 87,
+     "injuries": 121
+    },
+    {
+     "label": "9시",
+     "accidents": 75,
+     "deaths": 79,
+     "injuries": 108
+    },
+    {
+     "label": "10시",
+     "accidents": 81,
+     "deaths": 85,
+     "injuries": 114
+    },
+    {
+     "label": "11시",
+     "accidents": 89,
+     "deaths": 96,
+     "injuries": 129
+    },
+    {
+     "label": "12시",
+     "accidents": 104,
+     "deaths": 115,
+     "injuries": 141
+    },
+    {
+     "label": "13시",
+     "accidents": 103,
+     "deaths": 117,
+     "injuries": 146
+    },
+    {
+     "label": "14시",
+     "accidents": 110,
+     "deaths": 122,
+     "injuries": 143
+    },
+    {
+     "label": "15시",
+     "accidents": 110,
+     "deaths": 110,
+     "injuries": 157
+    },
+    {
+     "label": "16시",
+     "accidents": 129,
+     "deaths": 125,
+     "injuries": 166
+    },
+    {
+     "label": "17시",
+     "accidents": 155,
+     "deaths": 157,
+     "injuries": 207
+    },
+    {
+     "label": "18시",
+     "accidents": 155,
+     "deaths": 165,
+     "injuries": 206
+    },
+    {
+     "label": "19시",
+     "accidents": 137,
+     "deaths": 142,
+     "injuries": 180
+    },
+    {
+     "label": "20시",
+     "accidents": 127,
+     "deaths": 134,
+     "injuries": 163
+    },
+    {
+     "label": "21시",
+     "accidents": 119,
+     "deaths": 115,
+     "injuries": 153
+    },
+    {
+     "label": "22시",
+     "accidents": 107,
+     "deaths": 111,
+     "injuries": 147
+    },
+    {
+     "label": "23시",
+     "accidents": 97,
+     "deaths": 107,
+     "injuries": 135
+    }
+   ],
+   "type": [
+    {
+     "name": "차대사람",
+     "accidents": 910,
+     "deaths": 960,
+     "injuries": 1211
+    },
+    {
+     "name": "차대차",
+     "accidents": 763,
+     "deaths": 793,
+     "injuries": 1039
+    },
+    {
+     "name": "차량단독",
+     "accidents": 706,
+     "deaths": 726,
+     "injuries": 964
+    },
+    {
+     "name": "철길건널목",
+     "accidents": 51,
+     "deaths": 48,
+     "injuries": 66
+    }
+   ]
+  },
+  "2025": {
+   "total": {
+    "accidents": 2380,
+    "deaths": 2475,
+    "injuries": 3213
+   },
+   "region": [
+    {
+     "name": "서울",
+     "accidents": 241,
+     "deaths": 237,
+     "injuries": 300
+    },
+    {
+     "name": "부산",
+     "accidents": 127,
+     "deaths": 136,
+     "injuries": 171
+    },
+    {
+     "name": "대구",
+     "accidents": 87,
+     "deaths": 90,
+     "injuries": 123
+    },
+    {
+     "name": "인천",
+     "accidents": 99,
+     "deaths": 110,
+     "injuries": 145
+    },
+    {
+     "name": "광주",
+     "accidents": 54,
+     "deaths": 55,
+     "injuries": 66
+    },
+    {
+     "name": "대전",
+     "accidents": 52,
+     "deaths": 53,
+     "injuries": 68
+    },
+    {
+     "name": "울산",
+     "accidents": 50,
+     "deaths": 51,
+     "injuries": 67
+    },
+    {
+     "name": "세종",
+     "accidents": 19,
+     "deaths": 22,
+     "injuries": 29
+    },
+    {
+     "name": "경기",
+     "accidents": 488,
+     "deaths": 494,
+     "injuries": 627
+    },
+    {
+     "name": "강원",
+     "accidents": 117,
+     "deaths": 124,
+     "injuries": 147
+    },
+    {
+     "name": "충북",
+     "accidents": 114,
+     "deaths": 116,
+     "injuries": 147
+    },
+    {
+     "name": "충남",
+     "accidents": 161,
+     "deaths": 167,
+     "injuries": 221
+    },
+    {
+     "name": "전북",
+     "accidents": 130,
+     "deaths": 137,
+     "injuries": 181
+    },
+    {
+     "name": "전남",
+     "accidents": 188,
+     "deaths": 181,
+     "injuries": 253
+    },
+    {
+     "name": "경북",
+     "accidents": 210,
+     "deaths": 238,
+     "injuries": 302
+    },
+    {
+     "name": "경남",
+     "accidents": 193,
+     "deaths": 213,
+     "injuries": 293
+    },
+    {
+     "name": "제주",
+     "accidents": 50,
+     "deaths": 51,
+     "injuries": 73
+    }
+   ],
+   "month": [
+    {
+     "label": "1월",
+     "accidents": 178,
+     "deaths": 183,
+     "injuries": 255
+    },
+    {
+     "label": "2월",
+     "accidents": 165,
+     "deaths": 185,
+     "injuries": 221
+    },
+    {
+     "label": "3월",
+     "accidents": 191,
+     "deaths": 178,
+     "injuries": 239
+    },
+    {
+     "label": "4월",
+     "accidents": 197,
+     "deaths": 207,
+     "injuries": 268
+    },
+    {
+     "label": "5월",
+     "accidents": 200,
+     "deaths": 209,
+     "injuries": 267
+    },
+    {
+     "label": "6월",
+     "accidents": 206,
+     "deaths": 203,
+     "injuries": 267
+    },
+    {
+     "label": "7월",
+     "accidents": 199,
+     "deaths": 215,
+     "injuries": 280
+    },
+    {
+     "label": "8월",
+     "accidents": 209,
+     "deaths": 225,
+     "injuries": 292
+    },
+    {
+     "label": "9월",
+     "accidents": 208,
+     "deaths": 215,
+     "injuries": 268
+    },
+    {
+     "label": "10월",
+     "accidents": 222,
+     "deaths": 225,
+     "injuries": 292
+    },
+    {
+     "label": "11월",
+     "accidents": 209,
+     "deaths": 227,
+     "injuries": 281
+    },
+    {
+     "label": "12월",
+     "accidents": 196,
+     "deaths": 203,
+     "injuries": 283
+    }
+   ],
+   "hour": [
+    {
+     "label": "0시",
+     "accidents": 81,
+     "deaths": 87,
+     "injuries": 108
+    },
+    {
+     "label": "1시",
+     "accidents": 74,
+     "deaths": 79,
+     "injuries": 93
+    },
+    {
+     "label": "2시",
+     "accidents": 70,
+     "deaths": 67,
+     "injuries": 91
+    },
+    {
+     "label": "3시",
+     "accidents": 70,
+     "deaths": 77,
+     "injuries": 100
+    },
+    {
+     "label": "4시",
+     "accidents": 79,
+     "deaths": 87,
+     "injuries": 110
+    },
+    {
+     "label": "5시",
+     "accidents": 91,
+     "deaths": 93,
+     "injuries": 113
+    },
+    {
+     "label": "6시",
+     "accidents": 78,
+     "deaths": 82,
+     "injuries": 103
+    },
+    {
+     "label": "7시",
+     "accidents": 84,
+     "deaths": 91,
+     "injuries": 119
+    },
+    {
+     "label": "8시",
+     "accidents": 86,
+     "deaths": 85,
+     "injuries": 116
+    },
+    {
+     "label": "9시",
+     "accidents": 75,
+     "deaths": 78,
+     "injuries": 107
+    },
+    {
+     "label": "10시",
+     "accidents": 79,
+     "deaths": 83,
+     "injuries": 115
+    },
+    {
+     "label": "11시",
+     "accidents": 85,
+     "deaths": 98,
+     "injuries": 126
+    },
+    {
+     "label": "12시",
+     "accidents": 106,
+     "deaths": 102,
+     "injuries": 133
+    },
+    {
+     "label": "13시",
+     "accidents": 110,
+     "deaths": 106,
+     "injuries": 149
+    },
+    {
+     "label": "14시",
+     "accidents": 112,
+     "deaths": 118,
+     "injuries": 146
+    },
+    {
+     "label": "15시",
+     "accidents": 116,
+     "deaths": 111,
+     "injuries": 151
+    },
+    {
+     "label": "16시",
+     "accidents": 117,
+     "deaths": 123,
+     "injuries": 167
+    },
+    {
+     "label": "17시",
+     "accidents": 139,
+     "deaths": 141,
+     "injuries": 200
+    },
+    {
+     "label": "18시",
+     "accidents": 146,
+     "deaths": 155,
+     "injuries": 194
+    },
+    {
+     "label": "19시",
+     "accidents": 141,
+     "deaths": 137,
+     "injuries": 177
+    },
+    {
+     "label": "20시",
+     "accidents": 131,
+     "deaths": 137,
+     "injuries": 164
+    },
+    {
+     "label": "21시",
+     "accidents": 113,
+     "deaths": 125,
+     "injuries": 150
+    },
+    {
+     "label": "22시",
+     "accidents": 102,
+     "deaths": 116,
+     "injuries": 150
+    },
+    {
+     "label": "23시",
+     "accidents": 95,
+     "deaths": 97,
+     "injuries": 131
+    }
+   ],
+   "type": [
+    {
+     "name": "차대사람",
+     "accidents": 881,
+     "deaths": 905,
+     "injuries": 1172
+    },
+    {
+     "name": "차대차",
+     "accidents": 749,
+     "deaths": 816,
+     "injuries": 1033
+    },
+    {
+     "name": "차량단독",
+     "accidents": 703,
+     "deaths": 702,
+     "injuries": 941
+    },
+    {
+     "name": "철길건널목",
+     "accidents": 47,
+     "deaths": 52,
+     "injuries": 67
+    }
+   ]
+  }
+ }
+}
