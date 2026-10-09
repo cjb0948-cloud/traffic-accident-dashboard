@@ -1,0 +1,137 @@
+:root {
+  --paper: #f6f7f4;
+  --ink: #1d2428;
+  --muted: #5e6a70;
+  --line: #d9ddd8;
+  --sign: #0b5d45;
+  --death: #b42318;
+  --injury: #a86f00;
+  --good: #0b6b3a;
+  --bad: #b42318;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Pretendard, "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
+  line-height: 1.55;
+}
+
+/* 고속도로 안내표지판을 닮은 머리말 */
+.sign {
+  position: relative;
+  margin: 16px;
+  padding: 28px 36px;
+  background: var(--sign);
+  color: #fff;
+  border-radius: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+.sign::before {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 9px;
+  pointer-events: none;
+}
+.sign h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 800; letter-spacing: -0.02em; }
+.sign p { margin: 4px 0 0; font-size: 0.95rem; opacity: 0.92; }
+
+.year-pick { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.year-pick select {
+  font: inherit;
+  font-weight: 700;
+  color: var(--ink);
+  background: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 14px;
+  min-width: 110px;
+}
+
+.notice {
+  margin: 0 16px;
+  padding: 10px 16px;
+  border-left: 4px solid var(--injury);
+  background: #fff6e0;
+  font-size: 0.92rem;
+}
+.notice.error { border-left-color: var(--death); background: #fdecea; }
+
+main { max-width: 1200px; margin: 0 auto; padding: 8px 16px 32px; }
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 24px 0 20px;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.kpi {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px 16px 0;
+  margin-right: 20px;
+  border-right: 1px solid var(--line);
+}
+.kpi:last-child { border-right: 0; margin-right: 0; }
+.kpi-label { color: var(--muted); font-size: 0.9rem; font-weight: 600; }
+.kpi strong { font-size: clamp(1.6rem, 3.2vw, 2.3rem); font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.kpi.death strong { color: var(--death); }
+.kpi.injury strong { color: var(--injury); }
+.kpi-sub { color: var(--muted); font-size: 0.85rem; min-height: 1.3em; }
+.kpi-sub.good { color: var(--good); font-weight: 600; }
+.kpi-sub.bad { color: var(--bad); font-weight: 600; }
+
+.metric-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 16px; }
+.metric-bar span { color: var(--muted); font-size: 0.9rem; font-weight: 600; margin-right: 4px; }
+.metric-bar button {
+  font: inherit;
+  font-weight: 600;
+  padding: 7px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+}
+.metric-bar button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.metric-bar button:focus-visible,
+.year-pick select:focus-visible { outline: 3px solid #f5c400; outline-offset: 2px; }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+.panel { padding: 20px 0 8px; border-top: 1px solid var(--line); min-width: 0; }
+.panel.wide { grid-column: 1 / -1; }
+.panel h2 { margin: 0 0 12px; font-size: 1.05rem; font-weight: 700; }
+.chart { position: relative; width: 100%; }
+.h260 { height: 260px; }
+.h460 { height: 460px; }
+
+footer { max-width: 1200px; margin: 0 auto; padding: 20px 16px 40px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); }
+footer p { margin: 2px 0; }
+
+@media (max-width: 800px) {
+  .sign { padding: 22px 22px; margin: 10px; }
+  .kpis { grid-template-columns: 1fr 1fr; }
+  .kpi { border-right: 0; margin-right: 0; border-bottom: 1px solid var(--line); }
+  .grid { grid-template-columns: 1fr; }
+  .h460 { height: 420px; }
+}
+
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin: 20px 0 0; }
+.filters label { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.92rem; color: var(--muted); }
+.filters select { font: inherit; font-weight: 700; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 7px 12px; max-width: 190px; }
+.filters select:focus-visible { outline: 3px solid #f5c400; outline-offset: 2px; }
+.filters .metric-bar { margin: 0 0 0 auto; }
+@media (max-width: 800px) { .filters .metric-bar { margin-left: 0; } }
