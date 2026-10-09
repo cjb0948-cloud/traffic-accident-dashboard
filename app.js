@@ -1,15 +1,24 @@
 const METRICS = {
-  accidents: { label: '사고 건수', unit: '건', color: '#0b5d45' },
-  deaths: { label: '사망자', unit: '명', color: '#b42318' },
-  injuries: { label: '부상자', unit: '명', color: '#c98a00' },
+  accidents: { label: '사고 건수', unit: '건', color: '#0b5d45', i: 0 },
+  deaths: { label: '사망자', unit: '명', color: '#b42318', i: 1 },
+  injuries: { label: '부상자', unit: '명', color: '#c98a00', i: 2 },
 };
+const SHORT = {
+  '서울특별시': '서울', '부산광역시': '부산', '대구광역시': '대구', '인천광역시': '인천', '광주광역시': '광주',
+  '대전광역시': '대전', '울산광역시': '울산', '세종특별자치시': '세종', '경기도': '경기', '강원도': '강원',
+  '강원특별자치도': '강원', '충청북도': '충북', '충청남도': '충남', '전라북도': '전북', '전북특별자치도': '전북',
+  '전라남도': '전남', '경상북도': '경북', '경상남도': '경남', '제주특별자치도': '제주', '제주도': '제주',
+};
+const ALL = '전국';
 
-const state = { year: null, metric: 'accidents' };
+const state = { year: null, metric: 'accidents', cls: null, sido: ALL };
 const charts = {};
 let DATA = null;
 
 const $ = (sel) => document.querySelector(sel);
 const fmt = (n) => Number(n).toLocaleString('ko-KR');
+const sidoOf = (name) => { const t = name.split(' ')[0]; return SHORT[t] || t; };
+const restOf = (name) => name.split(' ').slice(1).join(' ') || name;
 
 async function init() {
   try {
@@ -21,27 +30,26 @@ async function init() {
     return;
   }
 
-  const years = Object.keys(DATA.years).map(Number).sort((a, b) => a - b);
-  const select = $('#year');
-  years.slice().reverse().forEach((y) => {
-    const opt = document.createElement('option');
-    opt.value = y;
-    opt.textContent = y + '년';
-    select.appendChild(opt);
-  });
+  const years = yearList();
+  const yearSel = $('#year');
+  years.slice().reverse().forEach((y) => yearSel.appendChild(new Option(y + '년', y)));
   state.year = years[years.length - 1];
-  select.value = state.year;
-  select.addEventListener('change', () => {
-    state.year = Number(select.value);
-    render();
-  });
+  yearSel.value = state.year;
+  yearSel.addEventListener('change', () => { state.year = Number(yearSel.value); fillSido(); render(); });
+
+  const clsSel = $('#cls');
+  DATA.classes.forEach((c) => clsSel.appendChild(new Option(c, c)));
+  state.cls = DATA.classes.includes('전체사고') ? '전체사고' : DATA.classes[0];
+  clsSel.value = state.cls;
+  clsSel.addEventListener('change', () => { state.cls = clsSel.value; render(); });
+
+  $('#sido').addEventListener('change', (e) => { state.sido = e.target.value; render(); });
+  fillSido();
 
   document.querySelectorAll('.metric-bar button').forEach((btn) => {
     btn.addEventListener('click', () => {
       state.metric = btn.dataset.metric;
-      document.querySelectorAll('.metric-bar button').forEach((b) =>
-        b.setAttribute('aria-pressed', String(b === btn))
-      );
+      document.querySelectorAll('.metric-bar button').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
       render();
     });
   });
@@ -61,6 +69,8 @@ async function init() {
   render();
 }
 
+function yearList() { return Object.keys(DATA.years).map(Number).sort((a, b) => a - b); }
+
 function showNotice(text, isError) {
   const el = $('#notice');
   el.textContent = text;
@@ -68,74 +78,81 @@ function showNotice(text, isError) {
   el.hidden = false;
 }
 
+function fillSido() {
+  const sel = $('#sido');
+  const names = [];
+  DATA.years[state.year].rows.forEach((r) => { const s = sidoOf(r[0]); if (!names.includes(s)) names.push(s); });
+  sel.innerHTML = '';
+  [ALL, ...names].forEach((n) => sel.appendChild(new Option(n, n)));
+  if (![ALL, ...names].includes(state.sido)) state.sido = ALL;
+  sel.value = state.sido;
+}
+
 function render() {
   const y = state.year;
-  const m = state.metric;
-  const M = METRICS[m];
+  const M = METRICS[state.metric];
   const d = DATA.years[y];
+  const clsIdx = DATA.classes.indexOf(state.cls);
+  const rows = d.rows.filter((r) => r[1] === clsIdx);
 
   renderKpis(y, d);
 
-  $('#t-trend').textContent = '연도별 ' + M.label + ' 추이';
-  $('#t-region').textContent = y + '년 시도별 ' + M.label;
-  $('#t-type').textContent = y + '년 사고 유형별 ' + M.label;
-  $('#t-month').textContent = y + '년 월별 ' + M.label;
-  $('#t-hour').textContent = y + '년 시간대별 ' + M.label;
+  $('#t-trend').textContent = '연도별 ' + state.cls + ' ' + M.label + ' 추이 (전국)';
+  $('#t-classes').textContent = y + '년 사고 종류별 ' + M.label + ' (전국)';
+  $('#t-region').textContent = y + '년 시도별 ' + state.cls + ' ' + M.label;
+  $('#t-top').textContent = y + '년 ' + (state.sido === ALL ? '전국' : state.sido) + ' ' + state.cls + ' ' + M.label + ' 상위 15개 시군구';
 
-  const years = Object.keys(DATA.years).map(Number).sort((a, b) => a - b);
+  const years = yearList();
+  const natVal = (yr, c) => { const n = DATA.years[yr].national[c]; return n ? n[M.i] : null; };
   drawChart('trend', {
     type: 'line',
     data: {
       labels: years.map((v) => v + '년'),
       datasets: [{
-        data: years.map((v) => DATA.years[v].total[m]),
-        borderColor: M.color,
-        backgroundColor: M.color,
-        borderWidth: 2.5,
-        tension: 0.25,
+        data: years.map((v) => natVal(v, state.cls)),
+        borderColor: M.color, backgroundColor: M.color, borderWidth: 2.5, tension: 0.25,
         pointRadius: years.map((v) => (v === y ? 7 : 4)),
         pointBackgroundColor: years.map((v) => (v === y ? M.color : '#fff')),
-        pointBorderColor: M.color,
-        pointBorderWidth: 2,
+        pointBorderColor: M.color, pointBorderWidth: 2,
       }],
     },
     options: baseOptions(M, false),
   });
 
-  const region = d.region.slice().sort((a, b) => b[m] - a[m]);
-  drawChart('region', barConfig(region.map((r) => r.name), region.map((r) => r[m]), M, true));
+  const cl = DATA.classes.filter((c) => d.national[c]).map((c) => [c, d.national[c][M.i]]).sort((a, b) => b[1] - a[1]);
+  drawChart('classes', barConfig(cl.map((r) => r[0]), cl.map((r) => r[1]), M, true,
+    cl.map((r) => (r[0] === state.cls ? M.color : M.color + '66'))));
 
-  const types = d.type.slice().sort((a, b) => b[m] - a[m]);
-  drawChart('type', barConfig(types.map((r) => r.name), types.map((r) => r[m]), M, true));
+  const bySido = {};
+  rows.forEach((r) => { const s = sidoOf(r[0]); bySido[s] = (bySido[s] || 0) + r[2 + M.i]; });
+  const sd = Object.entries(bySido).sort((a, b) => b[1] - a[1]);
+  drawChart('region', barConfig(sd.map((r) => r[0]), sd.map((r) => r[1]), M, true,
+    sd.map((r) => (state.sido !== ALL && r[0] === state.sido ? M.color : M.color + (state.sido === ALL ? '' : '66')))));
 
-  drawChart('month', barConfig(d.month.map((r) => r.label), d.month.map((r) => r[m]), M, false));
-  drawChart('hour', barConfig(d.hour.map((r) => r.label), d.hour.map((r) => r[m]), M, false));
+  const top = rows.filter((r) => state.sido === ALL || sidoOf(r[0]) === state.sido)
+    .sort((a, b) => b[2 + M.i] - a[2 + M.i]).slice(0, 15);
+  drawChart('top', barConfig(
+    top.map((r) => (state.sido === ALL ? sidoOf(r[0]) + ' ' + restOf(r[0]) : restOf(r[0]))),
+    top.map((r) => r[2 + M.i]), M, true));
 }
 
 function renderKpis(y, d) {
-  const t = d.total;
-  $('#k-accidents').textContent = fmt(t.accidents) + '건';
-  $('#k-deaths').textContent = fmt(t.deaths) + '명';
-  $('#k-injuries').textContent = fmt(t.injuries) + '명';
-  const rate = t.accidents ? (t.deaths / t.accidents) : 0;
-  $('#s-accidents').textContent = y + '년';
-  $('#s-deaths').textContent = '사고 1건당 ' + rate.toFixed(2) + '명';
-  $('#s-injuries').textContent = y + '년';
-
-  const prev = DATA.years[y - 1];
-  const delta = $('#k-delta');
+  const cur = d.national[state.cls];
+  $('#l-accidents').textContent = state.cls + ' 건수';
+  ['accidents', 'deaths', 'injuries'].forEach((k, i) => {
+    $('#k-' + k).textContent = cur ? fmt(cur[i]) + (i === 0 ? '건' : '명') : '-';
+    $('#s-' + k).textContent = '전국 ' + y + '년';
+  });
   const sub = $('#s-delta');
+  const delta = $('#k-delta');
   sub.className = 'kpi-sub';
-  if (!prev) {
-    delta.textContent = '-';
-    sub.textContent = '전년 자료 없음';
-    return;
-  }
-  const diff = t.deaths - prev.total.deaths;
-  const pct = prev.total.deaths ? (diff / prev.total.deaths) * 100 : 0;
+  const prev = DATA.years[y - 1] && DATA.years[y - 1].national[state.cls];
+  if (!cur || !prev) { delta.textContent = '-'; sub.textContent = '전년 자료 없음'; return; }
+  const diff = cur[1] - prev[1];
+  const pct = prev[1] ? (diff / prev[1]) * 100 : 0;
   const sign = diff > 0 ? '+' : diff < 0 ? '-' : '';
   delta.textContent = sign + fmt(Math.abs(diff)) + '명';
-  sub.textContent = sign + Math.abs(pct).toFixed(1) + '% (' + (y - 1) + '년 ' + fmt(prev.total.deaths) + '명)';
+  sub.textContent = sign + Math.abs(pct).toFixed(1) + '% (' + (y - 1) + '년 ' + fmt(prev[1]) + '명)';
   if (diff < 0) sub.classList.add('good');
   if (diff > 0) sub.classList.add('bad');
 }
@@ -155,10 +172,10 @@ function baseOptions(M, horizontal) {
   };
 }
 
-function barConfig(labels, values, M, horizontal) {
+function barConfig(labels, values, M, horizontal, colors) {
   return {
     type: 'bar',
-    data: { labels, datasets: [{ data: values, backgroundColor: M.color, borderRadius: 2, maxBarThickness: 26 }] },
+    data: { labels, datasets: [{ data: values, backgroundColor: colors || M.color, borderRadius: 2, maxBarThickness: 26 }] },
     options: baseOptions(M, horizontal),
   };
 }

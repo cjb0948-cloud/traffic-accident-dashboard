@@ -19,6 +19,8 @@ jobs:
       - name: 한국도로교통공단 데이터 가져오기
         env:
           KOROAD_KEY: ${{ secrets.KOROAD_KEY }}
+          KOROAD_ENDPOINT: ${{ vars.KOROAD_ENDPOINT }}
+          KOROAD_KEY_PARAM: ${{ vars.KOROAD_KEY_PARAM }}
         run: python scripts/fetch_data.py
       - name: 변경사항 커밋
         run: |
